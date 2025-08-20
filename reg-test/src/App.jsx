@@ -9,7 +9,7 @@ function NerHarah() {
 return (
   <div>
     <h2>Таны нэр: {ner}</h2>
-    <p>Таны нууц үг: {nuutsUg}</p>
+    <p>Nuuts ug {nuutsUg}</p>
     <button onClick={garah}>Гарах</button>
   </div>
 );

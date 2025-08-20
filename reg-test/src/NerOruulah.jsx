@@ -2,9 +2,21 @@ import React from "react";
 import { useBurtgel } from "./assets/Burtgel";
 
 export default function NerOruulah() {
-  const { setNuutsUg, setNer } = useBurtgel();
+  const { setNuutsUg, setNer, burtguuleh, user } = useBurtgel();
   const [nerText, setNerText] = React.useState('');
   const [nuutsText, setNuutsText] = React.useState('');
+
+const nevtreh = () => {
+  const olduser = user.find((u) => u.ner === nerText && u.nuutsUg === nuutsText);
+  if (!olduser) {
+    alert('Нэр эсвэл нууц үг буруу байна.');
+    return;
+  }
+
+    setNer(olduser.ner);
+    setNuutsUg(olduser.nuutsUg);
+    alert('Амжилттай нэвтэрлээ.');
+  };
 
   return (
     <div>
@@ -23,12 +35,11 @@ export default function NerOruulah() {
       />
 
       <button
-        onClick={() => {
-          setNer(nerText);
-          setNuutsUg(nuutsText);
-        }}>
-            Нэр оруулах
-        </button>
+        onClick={() => burtguuleh(nerText, nuutsText)}>
+          Бүртгүүлэх
+      </button>
+    <button onClick={nevtreh}>Нэвтрэх</button>
+
     </div>
   );
 }
