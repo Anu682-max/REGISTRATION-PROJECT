@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, use, useEffect } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 
 const Burtgel = createContext();
 
@@ -44,7 +44,7 @@ const burtguuleh = (nerText, nuutsText) => {
    }
 
    const shineUser = { 
-    ner: ner,
+    ner: nerText,
     nuutsUg: nuutsText,
     data: new Date().toLocaleString()
 }

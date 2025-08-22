@@ -19,27 +19,82 @@ const nevtreh = () => {
   };
 
   return (
-    <div>
-      <h1>Нэр оруулах</h1>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '60vh',
+      background: '#f7f7fa',
+      borderRadius: '12px',
+      boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
+      padding: '32px',
+      maxWidth: '350px',
+      margin: '40px auto'
+    }}>
+      <h2 style={{marginBottom: 24, color: '#333'}}>Нэвтрэх / Бүртгүүлэх</h2>
       <input
         type="text"
         value={nerText}
         onChange={(event) => setNerText(event.target.value)}
+        placeholder="Нэрээ оруулна уу"
+        style={{
+          width: '100%',
+          padding: '10px',
+          marginBottom: '16px',
+          border: '1px solid #ccc',
+          borderRadius: '6px',
+          fontSize: '16px'
+        }}
       />
-      <br />
       <input
         type="password"
         value={nuutsText}
         onChange={(event) => setNuutsText(event.target.value)}
         placeholder="Нууц үг оруулна уу"
+        style={{
+          width: '100%',
+          padding: '10px',
+          marginBottom: '20px',
+          border: '1px solid #ccc',
+          borderRadius: '6px',
+          fontSize: '16px'
+        }}
       />
-
-      <button
-        onClick={() => burtguuleh(nerText, nuutsText)}>
+      <div style={{display: 'flex', gap: '12px', width: '100%', justifyContent: 'center'}}>
+        <button
+          onClick={() => burtguuleh(nerText, nuutsText)}
+          style={{
+            background: '#4f8cff',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '6px',
+            padding: '10px 18px',
+            fontSize: '16px',
+            cursor: 'pointer',
+            fontWeight: 600,
+            transition: 'background 0.2s',
+          }}
+        >
           Бүртгүүлэх
-      </button>
-    <button onClick={nevtreh}>Нэвтрэх</button>
-
+        </button>
+        <button
+          onClick={nevtreh}
+          style={{
+            background: '#fff',
+            color: '#4f8cff',
+            border: '1.5px solid #4f8cff',
+            borderRadius: '6px',
+            padding: '10px 18px',
+            fontSize: '16px',
+            cursor: 'pointer',
+            fontWeight: 600,
+            transition: 'background 0.2s, color 0.2s',
+          }}
+        >
+          Нэвтрэх
+        </button>
+      </div>
     </div>
   );
 }
