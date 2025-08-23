@@ -9,8 +9,8 @@ function NerHarah() {
   return (
     <div style={{
       background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      borderRadius: '15px',
-      padding: '35px',
+      borderRadius: '16px',
+      padding: '32px',
       margin: '32px auto',
       maxWidth: '400px',
       boxShadow: '0 10px 30px rgba(0,0,0,0.15)',
